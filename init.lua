@@ -29,7 +29,7 @@ minetest.register_node("redw:dirt_with_grass", {
 	tiles = {"redw_dirt_with_grass.png", "redw_dirt.png",
 		{name = "redw_dirt.png^redw_dirt_with_grass_side.png",
 			tileable_vertical = false}},
-	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
+	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.25},
 	}),
@@ -38,7 +38,7 @@ minetest.register_node("redw:dirt_with_grass", {
 minetest.register_node("redw:dirt", {
 	description = S("Red Dirt"),
 	tiles = {"redw_dirt.png"},
-	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
+	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.25},
 	}),
@@ -47,10 +47,8 @@ minetest.register_node("redw:dirt", {
 minetest.register_node("redw:sandstone", {
 	description = S("Red Sandstone"),
 	tiles = {"redw_sandstone.png"},
-	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-	sounds = default.node_sound_dirt_defaults({
-		footstep = {name = "default_grass_footstep", gain = 0.25},
-	}),
+	groups = {crumbly = 1, cracky = 3},
+	sounds = default.node_sound_stone_defaults(),
 })
 
 -- Ferns
